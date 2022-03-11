@@ -1,141 +1,215 @@
 <!doctype html>
 <html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Teste Ranking</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Teste Ranking</title>
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
 
-    <style>
-        * {
-  box-sizing: border-box;
-}
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    .heading {
+      font-size: 25px;
+      margin-right: 25px;
+    }
 
-.bar-container {
-  width: 100%;
-  background-color: #f1f1f1;
-  text-align: center;
-  color: white;
-}
-.flex-container {
-  display: flex;
-  background-color: dark;
-}
+    .fa {
+      font-size: 25px;
+    }
 
-.flex-container > div {
-  background-color: #f1f1f1;
-  margin: 10px;
-  height: 175px;
-  padding: 83px;
-  font-size: 30px;
-  align-items: center; justify-content: center;
-}
+    .checked {
+      color: orange;
+    }
 
+    .side {
+      float: left;
+      width: 15%;
+      margin-top: 10px;
+    }
 
-@media (max-width: 400px) {
-  .side, .middle {
-    width: 100%;
-  }
-  .right {
-    display: none;
-  }
-}
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+    .middle {
+      float: left;
+      width: 70%;
+      margin-top: 10px;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .bar-container {
+      width: 100%;
+      background-color: #f1f1f1;
+      text-align: center;
+      color: white;
+    }
+
+    .flex-container {
+      display: flex;
+      background-color: dark;
+    }
+
+    .flex-container>div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      height: 175px;
+      padding: 83px;
+      font-size: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #bar-5 {
+      width: 22px;
+      height: 18px;
+      background-color: #04AA6D;
+    }
+
+    .bar-4 {
+      width: 0px;
+      height: 18px;
+      background-color: #2196F3;
+    }
+
+    .bar-3 {
+      width: 0px;
+      height: 18px;
+      background-color: #00bcd4;
+    }
+
+    .bar-2 {
+      width: 0px;
+      height: 18px;
+      background-color: #ff9800;
+    }
+
+    .bar-1 {
+      width: 0px;
+      height: 18px;
+      background-color: #f44336;
+    }
+
+    @media (max-width: 400px) {
+
+      .side,
+      .middle {
+        width: 100%;
       }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+      .right {
+        display: none;
       }
+    }
 
-#btn {
-width: 100px; height: 35px;
-background: dark;
-display: flex;
-align-items: center; justify-content: center;
-color: rgb(255, 255, 255);
-text-decoration: none;
-margin: auto;
-}
-a {
-color: white;
-text-decoration: none;
-}
-    </style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-    <link href="cover.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body class="d-flex h-75 text-center text-white bg-dark">
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+    #btn {
+      width: 100px;
+      height: 35px;
+      background: dark;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      margin: auto;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+
+  <link href="cover.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+    <div class="col-4 text-center">
+      <nav class="nav nav-masthead justify-content-center float-md-end fixed-top ">
+        <a id="in" class="nav-link active" href="#ric">Início</a>
+        <a id="pro" class="nav-link" href="#proj">Login</a>
+        <a id="con" class="nav-link" href="#cont">Registrar</a>
+      </nav>
+    </div>
+    </header>
+
+    <div class="cover-container d-flex w-100 h-50 p-3 mx-auto flex-column">
       <header class="mb-auto">
-        <div class="col-4 text-center">
-          <nav class="nav nav-masthead justify-content-center float-md-end fixed-top bg-dark">
-            <a id="in" class="nav-link active" href="#ric" >Início</a>
-            <a id="pro" class="nav-link" href="#proj">Login</a>
-            <a id="con" class="nav-link" href="#cont">Registrar</a>
-          </nav>
-        </div>
       </header>
-    
+
+      <main class="px-3">
+        <h1>Rankings da semana.</h1>
+        <p class="lead">Cadastre-se e escolha um ranking para votar ou envie uma sugestão!</p>
 
 
-  <main class="px-3">
-    <br><br>
-    <h1>Rankings da semana.</h1>
-    <p class="lead">Cadastre-se e escolha um ranking para votar ou envie uma sugestão!</p>
+        <div class="flex-container">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+
+        <div class="flex-container">
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+
+        <br>
+
+        <hr style="border:3px solid #f1f1f1">
 
 
-    <div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>  
-    </div>
-    
-    <div class="flex-container">
-      <div>4</div>
-      <div>5</div> 
-      <div>6</div>
-    </div>
-
-
-<hr style="border:3px solid #f1f1f1">
-
-
-<br>
-    <p>by Richard.</p>
 
 </body>
+
 </html>
 
-  </main>
+</main>
 
 </div>
-    
-  </body>
-  <script>
 
-var onem = document.getElementById('bar-5');
-var btn = document.getElementById("btn");
-btn.addEventListener("click", function() {
-var width1 = onem.offsetWidth
-onem.style.width= (width1+1)+"px";
-});
+</body>
+<script>
 
-  </script>
+  var onem = document.getElementById('bar-5');
+  var btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    var width1 = onem.offsetWidth
+    onem.style.width = (width1 + 1) + "px";
+  });
+
+</script>
+
 </html>
