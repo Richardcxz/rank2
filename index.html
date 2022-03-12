@@ -46,10 +46,10 @@
 				<div class="container">
 					<form>
 						<label style="color: black;">Usuário</label>
-						<input placeholder="Seu usuário" type="text">
+						<input id="usu" placeholder="Seu usuário" type="text">
 						<label style="color: black;">Senha</label>
-						<input placeholder="Sua senha" type="text">
-						<input type="submit" value="Entrar">
+						<input id="sen" placeholder="Sua senha" type="text">
+						<input class="logar" onclick="logar()" type="button" value="Entrar">
 					</form>
 				</div>
 			</div>
@@ -80,4 +80,16 @@
 	</div>
 	</main>
 </body>
+
+<script>
+
+function logar() {
+	var usuario = document.getElementById("usu").value;
+	var senha = document.getElementById("sen").value;
+	if(usuario == "admin" && senha == "admin") {
+  location.replace("/index2.html");
+}}
+	
+</script>
+
 </html>
