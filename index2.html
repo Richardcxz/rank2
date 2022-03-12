@@ -37,47 +37,19 @@
 
 
 	<div class="box">
-		<a class="button" href="#divOne">Login</a>
-	</div>
-	<div class="overlay" id="divOne">
-		<div class="wrapper">
-			<h2>Insira os dados</h2><a class="close" href="#">&times;</a>
-			<div class="content">
-				<div class="container">
-					<form>
-						<label style="color: black;">Usuário</label>
-						<input placeholder="Seu usuário" type="text">
-						<label style="color: black;">Senha</label>
-						<input placeholder="Sua senha" type="text">
-						<input type="submit" value="Entrar">
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="box">
-		<a class="button2" href="#divTwo">Cadastro</a>
-	</div>
-	<div class="overlay" id="divTwo">
-		<div class="wrapper">
-			<h2>Insira os dados</h2><a class="close" href="#">&times;</a>
-			<div class="content">
-				<div class="container">
-					<form>
-						<label style="color: black;">Insira um nome de Usuário</label>
-						<input placeholder="Seu usuário" type="text">
-						<label style="color: black;">Insira uma Senha</label>
-						<input placeholder="Sua senha" type="text">
-						<input type="submit" value="Cadastrar">
-					</form>
-				</div>
-			</div>
-		</div>
+		<a class="button" onclick="sair()">Sair</a>
 	</div>
 
 	</div>
 	</main>
 </body>
+
+<script>
+
+	function sair() {
+	  location.replace("rank2");
+	}
+		
+	</script>
+
 </html>
