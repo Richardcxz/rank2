@@ -122,12 +122,13 @@ input[type="submit"] {
 
   .flex-container {
 	display: flex;
-	opacity: 10%;
+	opacity: 0.1;
 	width: 100%;
 	background-color: black;
 	align-items: center;
 	justify-content: center;
   }
+
 
   .flex-container>div {
 	background-color: #f1f1f1;
@@ -159,4 +160,21 @@ input[type="submit"] {
 	font-size: 15px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
+}
+
+.moon{
+	filter: invert(100%);
+}
+.column {
+	width: 100%;
+	
+  }
+
+img{
+	margin: -100px;
+    width: 2020%;
+    max-width: 170px;
+    max-height:2009%;
+	margin-top: -55%;
+	position: relative;
 }
