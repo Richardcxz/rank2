@@ -69,10 +69,10 @@
 				<div class="container">
 					<form>
 						<label style="color: black;">Insira um nome de Usuário</label>
-						<input placeholder="Seu usuário" type="text">
+						<input id="usucad" placeholder="Seu usuário" type="text">
 						<label style="color: black;">Insira uma Senha</label>
-						<input placeholder="Sua senha" type="text">
-						<input type="submit" value="Cadastrar">
+						<input id="sencad" placeholder="Sua senha" type="text">
+						<input class="logar" onclick="cadastrar()" type="button" value="Cadastrar">
 					</form>
 				</div>
 			</div>
@@ -90,7 +90,21 @@ function logar() {
 	var senha = document.getElementById("sen").value;
 	if(usuario == "admin" && senha == "admin") {
   location.replace("https://richardcxz.github.io/rank2/index2.html");
-}}
+}
+    if(usuario == "" || senha == ""){
+		window.alert("Erro! Um dos campos está vazio.");
+}
+}
+function cadastrar() {
+	var usuario = document.getElementById("usucad").value;
+	var senha = document.getElementById("sencad").value;
+	if(usuario == "" || senha == ""){
+		window.alert("Erro! Um dos campos está vazio.");
+}
+if(usuario != "" && senha != ""){
+location.replace("#");
+}
+}
 	
 </script>
 
