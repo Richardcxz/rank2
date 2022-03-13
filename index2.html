@@ -37,8 +37,56 @@
 
 
 	<div class="box">
-		<a class="button" onclick="sair()">Sair</a>
+		<a class="button animate__animated animate__bounce" onclick="sair()">Sair</a>
 	</div>
+
+	<div class="box animate__animated animate__bounce">
+		<a class="button2 animate__animated animate__bounce" href="#divThree">Sugerir Ranking</a>
+	</div>
+	<div class="overlay" id="divThree">
+		<div class="wrapper">
+			<h2>Sugerir Ranking</h2><a class="close" href="#">&times;</a>
+			<div class="content">
+				<div class="container">
+					<form>
+						<label style="color: black;">Insira o nome do ranking</label>
+						<input id="nome" placeholder="Nome do seu ranking" type="text">
+						<label style="color: black;">Insira a descrição do ranking</label>
+						<textarea id="desc" class="form-control" placeholder="Descrição do seu ranking" rows="3" type="text"></textarea>
+						<br>
+						<input class="logar" onclick="avancar()" type="button" value="Avançar">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="overlay" id="divFour">
+		<div class="wrapper">
+			<h2>Sugerir Ranking</h2><a class="close" href="#">&times;</a>
+			<div class="content">
+				<div class="container">
+					<form>
+						<label style="color: black;">Categoria e opções do ranking</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+							<option>Jogos</option>
+							<option>Música</option>
+							<option>Futebol</option>
+							<option>Carros</option>
+							<option>Pessoas</option>
+						  </select>
+						<input id="op1" placeholder="Opção 1" type="text">
+						<input id="op2" placeholder="Opção 2" type="text">
+						<input id="op3" placeholder="Opção 3" type="text">
+						<input id="op4" placeholder="Opção 4" type="text">
+						<input id="op5" placeholder="Opção 5" type="text">
+						<input class="logar" onclick="sugerir()" type="button" value="Sugerir">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	</div>
 	</main>
@@ -47,8 +95,37 @@
 <script>
 
 	function sair() {
-	  location.replace("https://richardcxz.github.io/rank2/");
+	  location.replace("rank2");
 	}
+
+	function avancar() {
+	var nome1 = document.getElementById("nome").value;
+	var desc1 = document.getElementById("desc").value;
+	if(nome1 == "" || desc1 == ""){
+		window.alert("Erro! Um dos campos está vazio.");
+	}
+
+	else{
+	location.replace("#");
+	location.replace("#divFour");
+	}
+}
+
+    function sugerir(){
+
+	var opc1 = document.getElementById("op1").value;
+	var opc2 = document.getElementById("op2").value;
+	var opc3 = document.getElementById("op3").value;
+	var opc4 = document.getElementById("op4").value;
+	var opc5 = document.getElementById("op5").value;
+	if(opc1 == "" || opc2 == "" || opc3 == "" || opc4 == "" || opc5 == ""){
+		window.alert("Erro! Uma das opções está vazia.");
+}
+
+else{
+	location.replace("#");
+	window.alert("Seu ranking foi enviado como sugestão!");
+	}}
 		
 	</script>
 
