@@ -2,6 +2,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	background: #e7e7e7;
 	height: 100vh;
+	overflow: hidden;
 }
 h3 {
 	text-align: center;
