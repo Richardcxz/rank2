@@ -163,18 +163,18 @@ input[type="submit"] {
 }
 
 .moon{
-	filter: invert(100%);
+filter: invert(100%);
 }
 .column {
-	width: 100%;
+width: 100%;
 	
   }
 
 img{
-	margin: -100px;
-    width: 2020%;
-    max-width: 170px;
-    max-height:2009%;
-	margin-top: -55%;
-	position: relative;
+margin: -100px;
+width: 2020%;
+max-width: 170px;
+max-height:2009%;
+margin-top: -55%;
+position: relative;
 }
