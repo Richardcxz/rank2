@@ -12,14 +12,14 @@
 	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     
 </head>
-<body class="d-flex h-100 text-center text-white bg-dark">
+<body id="pagdark" class="d-flex h-100 text-center text-white bg-dark">
    
 	<div class="cover-container d-flex w-100 h-50 p-3 mx-auto flex-column">
 		<header class="mb-auto">
 		</header>
 	<main class="px-3 text-center">
-        <h1>Rankings da semana.</h1>
-        <p class="lead">Vote ou envie uma sugestão!</p>
+        <h1 id="tit" class="animate__animated animate__fadeInLeft ">Rankings da semana.<button type="button" id="goodbtn" class="btn">🌙</button></h1>
+        <p id="descr" class="lead">Vote ou envie uma sugestão!</p>
 
 	<div class="flex-container">
 	  <div>1</div>
@@ -86,7 +86,7 @@
 			</div>
 		</div>
 	</div>
-		
+
 	<br><br>
 	<footer class="mt-auto text-white-50">
 		<p>by Richard</p>
@@ -100,7 +100,7 @@
 <script>
 
 	function sair() {
-	  location.replace("https://richardcxz.github.io/rank2/");
+	  location.replace("rank2");
 	}
 
 	function avancar() {
@@ -133,5 +133,41 @@ else{
 	}}
 		
 	</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+<script>
+  $(document).ready(function()  {
+
+
+	$("#goodbtn").parent().on("click","#goodbtn", function () {
+
+       $("#pagdark").removeClass('bg-dark').addClass('bg-white');
+
+	   $("#tit").css("color", "black");
+	   $("#descr").css("color", "black");
+	   $("#foo").css("color", "black");
+	   $("#foo").removeClass('text-white-50').addClass('text-black-50');
+
+	   $('#pagdark').attr("id", "pagwhite");
+	   $('#goodbtn').attr("id", "badbtn");
+       });
+
+	$("#goodbtn").parent().on("click","#badbtn",function () {
+
+	$("#pagwhite").removeClass('bg-white').addClass('bg-dark');
+
+	$("#tit").css("color", "white");
+	$("#descr").css("color", "white");
+	$("#foo").removeClass('text-black-50').addClass('text-white-50');
+
+	$('#pagwhite').attr("id", "pagdark");
+	$('#badbtn').attr("id", "goodbtn");
+
+	});
+
+});
+
+</script>
 
 </html>
