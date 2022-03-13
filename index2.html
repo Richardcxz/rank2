@@ -41,7 +41,7 @@
 	</div>
 
 	<div class="box animate__animated animate__bounce">
-		<a class="button2 animate__animated animate__bounce" href="#divThree">Sugerir Ranking</a>
+		<a id="btnrnk" class="button2 animate__animated animate__bounce" href="#divThree">Sugerir Ranking</a>
 	</div>
 	<div class="overlay" id="divThree">
 		<div class="wrapper">
@@ -130,6 +130,9 @@
 else{
 	location.replace("#");
 	window.alert("Seu ranking foi enviado como sugestão!");
+	
+	document.getElementById("btnrnk").style.pointerEvents="none";
+	document.getElementById("btnrnk").style.cursor="default";
 	}}
 		
 	</script>
