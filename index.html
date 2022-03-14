@@ -103,11 +103,19 @@ function logar() {
 function cadastrar() {
 	var usuario = document.getElementById("usucad").value;
 	var senha = document.getElementById("sencad").value;
-	if(usuario == "" || senha == ""){
+	var email = document.getElementById("emailcad").value;
+	var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	if(usuario == "" || senha == "" || email == ""){
 		window.alert("Erro! Um dos campos está vazio.");
 }
+
+if(emailcad.value.match(validRegex)){
 if(usuario != "" && senha != ""){
 location.replace("#");
+}
+}
+else{
+window.alert("E-Mail inválido!");
 }
 }
 	
