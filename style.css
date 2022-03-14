@@ -163,18 +163,45 @@ input[type="submit"] {
 }
 
 .moon{
-filter: invert(100%);
+	filter: invert(100%);
 }
 .column {
-width: 100%;
+	width: 100%;
 	
   }
 
 img{
-margin: -100px;
-width: 2020%;
-max-width: 170px;
-max-height:2009%;
-margin-top: -55%;
-position: relative;
+	margin: -100px;
+    width: 2020%;
+    max-width: 170px;
+    max-height:2009%;
+	margin-top: -55%;
+	position: relative;
 }
+
+.zoom {
+	padding: 50px;
+	transition: transform .2s; /* Animation */
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+  }
+  
+  .zoom:hover {
+	transform: scale(1.5);
+  }
+
+  .zoomimg {
+	padding: 50px;
+	transition: transform .2s; /* Animation */
+	margin: -100px;
+    width: 2020%;
+    max-width: 270px;
+    max-height:2009%;
+	margin-top: -55%;
+	position: relative;
+  }
+  
+  .zoomimg:hover {
+	transform: scale(1.5);
+  }
