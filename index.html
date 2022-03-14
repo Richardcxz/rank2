@@ -70,12 +70,15 @@
 				<div class="container">
 					<form>
 						<label style="color: black;">Insira um nome de Usuário</label>
-						<input id="usucad" placeholder="Seu usuário" type="text">
+						<input onclick="cadastrarblock()" id="usucad" placeholder="Seu usuário" type="text">
 						<label style="color: black;">Insira uma Senha</label>
 						<input id="sencad" placeholder="Sua senha" type="text">
 						<label id="sencad" style="color: black;">Insira um E-mail válido</label>
 						<input id="emailcad" placeholder="exemplo@provedor.com" type="text" value="">
-						<input class="logar" onclick="cadastrar()" type="button" value="Cadastrar">
+						<div class="form-group bot">
+							<a href="#divTwo"><i class="fa fa-circle"></i><span>Não sou um robô</span></a>
+						  </div>
+						<input id="cadastro" class="logar" onclick="cadastrar()" type="button" value="Cadastrar">
 					</form>
 				</div>
 			</div>
@@ -154,6 +157,14 @@ window.alert("E-Mail inválido!");
 	$('#badbtn').attr("id", "goodbtn");
 
 	});
+
+	$('.bot').on('click',function(e){
+    $(this).find('i').addClass('fa-check-circle');
+  $(this).find('a').addClass('chk');
+    $(this).find('i').removeClass('fa-circle');
+    $('.bot').css('pointer-events','none');
+	$('.bot').removeClass('shake'); setTimeout(function(){$('.bot').addClass('shake'); }, 400); return false;
+});
 
 });
 
